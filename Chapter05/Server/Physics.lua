@@ -2,7 +2,7 @@ local playerService = game:GetService("Players")
 local physicsService = game:GetService("PhysicsService")
 local physicsMod = {}
 
-physicsService:CreateCollisionGroup("Players")
+physicsService:RegisterCollisionGroup("Players")
 physicsService:CollisionGroupSetCollidable("Players", "Players", false)
 
 playerService.PlayerAdded:Connect(function(player)
